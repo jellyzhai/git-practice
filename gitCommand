@@ -14,7 +14,7 @@ git使用流程：
      (1)、git remote add origin git@github.com:jellyzhai/repo-name.git
      (2)、git push -u origin master 【只有第一次带 -u 设置upstream】
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
 常用命令：
 
 1、回到任意一个提交版本，包括过去和未来：
@@ -33,3 +33,28 @@ git使用流程：
 5、要关联一个远程库，使用命令git remote add origin git@server-name:path/repo-name.git；
 	关联后，使用命令git push -u origin master第一次推送master分支的所有内容；
 	此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改(origin后面是哪个分支 就push到那个分支)；
+
+6、配置命令别名：
+       (1)、直接用 git st 就可以做 git status 的事了：
+       git config --global alias.st status
+
+        (2)、git lg 代替 git log：
+         git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+7、只从暂存区中删除：  git rm -r --cached a.txt
+
+ 8、从暂存区和工作区中删除：git rm a.txt
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+常见问题：
+
+1、git push 解决 弹出用户名和密码输入框：
+
+    git remote -v
+
+    重新设置成ssh的方式:
+
+    git remote rm origin
+    git remote add origin git@github.com:username/repository.git
+    git push -u origin master
