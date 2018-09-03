@@ -14,6 +14,9 @@ git使用流程：
      (1)、git remote add origin git@github.com:jellyzhai/repo-name.git
      (2)、git push -u origin master 【只有第一次带 -u 设置upstream】
 
+5、如果仓库是通过ssh协议 clone 的，可以省略第4步骤，直接使用 Git pull 和Git push，
+    clone前要先执行第3步
+
 ----------------------------------------------------------------------------------------------------------------------------------------
 常用命令：
 
