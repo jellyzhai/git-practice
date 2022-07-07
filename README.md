@@ -1,2 +1,2 @@
-# gitSummary
-git 使用总结
+# git-practice
+git 实践练习
