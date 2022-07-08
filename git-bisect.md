@@ -4,9 +4,7 @@ git bisect 可以用来查找哪一次代码提交引入了错误。它的原理
 
 #### * 基本命令
 
-* ```
-  git bisect start
-  ```
+* `git bisect start`
 
   * end就是最近的提交，start就是最开始的提交。
 
