@@ -1,11 +1,12 @@
 ### 远程操作
 
-#### * 本地初始化的git仓库，添加远程仓库
+#### * 本地初始化的git仓库，添加或移除远程仓库的关联关系
 
 * git remote add <remote_name> <remote_url>
-
   * `remote_name`：仓库名称（默认是origin）
   * `remote_url：远程仓库地址`（如：git@github.com:jellyzhai/git-practice.git）
+* git remote rm origin
+  * 从本地移除远程仓库的记录（也就是解除本地仓库和远程仓库的关系），并不会真正影响到远程仓库。
 
 #### * 查看远程仓库
 
